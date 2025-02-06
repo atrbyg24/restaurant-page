@@ -11,6 +11,7 @@ const home = (function() {
         
         const restaurantName = document.createElement("div");
         restaurantName.textContent = "Wanmin Restaurant";
+        restaurantName.id = "title";
         content.appendChild(restaurantName);
 
         const review = document.createElement("div");
@@ -18,6 +19,7 @@ const home = (function() {
         content.appendChild(review);
 
         const hours = document.createElement("div");
+        hours.textContent = "Hours";
         const sundayHours = document.createElement("div");
         sundayHours.textContent = "Sunday: 11am - 8pm";
         const mondayHours = document.createElement("div");
@@ -42,7 +44,10 @@ const home = (function() {
         content.append(hours);
 
         const location = document.createElement("div");
-        location.textContent = "Chihu Rock, Liyue Harbor, Sea of Clouds, Liyue";
+        location.textContent = "Location";
+        const address = document.createElement("div");
+        address.textContent = "Chihu Rock, Liyue Harbor, Sea of Clouds, Liyue";
+        location.appendChild(address);
         content.append(location);
     }
     
@@ -56,6 +61,7 @@ const menu = (function() {
 
         const menu = document.createElement("div");
         menu.textContent = "Menu";
+        menu.id = "title";
         content.appendChild(menu);
 
         const itemOne = document.createElement("div");
@@ -121,6 +127,7 @@ const about = (function() {
 
         const about = document.createElement("div");
         about.textContent = "About";
+        about.id = "title";
         content.appendChild(about);
 
         const staffOne = document.createElement("div");
@@ -143,6 +150,7 @@ const homeBtn = document.querySelector("#homeBtn");
 homeBtn.addEventListener("click",function() {
     home.homeContent();
 });
+homeBtn.click();
 
 const menuBtn = document.querySelector("#menuBtn");
 menuBtn.addEventListener("click",function() {
