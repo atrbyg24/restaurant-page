@@ -98,10 +98,25 @@ const menuBtn = (function() {
     itemFour.appendChild(itemFourDesc);
     itemFour.appendChild(itemFourPrice);
     content.appendChild(itemFour);
-
 })();
 
 const aboutBtn = (function() {
     const content = document.querySelector("#content");
     content.replaceChildren();
+
+    const about = document.createElement("div");
+    about.textContent = "About";
+    content.appendChild(about);
+
+    const staffOne = document.createElement("div");
+    staffOne.textContent = "Owner: Chef Mao";
+    content.appendChild(staffOne);
+
+    const staffTwo = document.createElement("div");
+    staffTwo.textContent = "Head Chef: Xiangling";
+    content.appendChild(staffTwo);
+
+    const staffThree = document.createElement("div");
+    staffThree.textContent = "Server: Shenhe";
+    content.appendChild(staffThree);
 })();
